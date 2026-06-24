@@ -39,6 +39,24 @@ struct HomeView: View {
             }
             .padding(18)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
+            //cabeçalho verde para separar o que eu estou fazendo//
+            
+            VStack(spacing: 8) {
+                HStack(spacing: 8){
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Receitas")
+                            .font(.system(size: 10))
+                            .foregroundColor(.gray)
+                        Text("€ 3.800")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(Color(red: 0.102, green: 0.478, blue: 0.235))
+                    }
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                }
+            }
             
             Spacer()
         }
