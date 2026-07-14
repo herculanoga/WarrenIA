@@ -5,7 +5,6 @@ struct HomeView: View {
         VStack(spacing: 0) {
             // Cabeçalho verde
             VStack(alignment: .leading, spacing: 0) {
-                // Topo: nome + avatar
                 HStack {
                     Text("Warren IA")
                         .font(.system(size: 16, weight: .medium))
@@ -22,7 +21,6 @@ struct HomeView: View {
                 }
                 .padding(.bottom, 16)
                 
-                // Saldo
                 Text("Saldo disponível — março 2026")
                     .font(.system(size: 11))
                     .foregroundColor(.white.opacity(0.75))
@@ -39,10 +37,10 @@ struct HomeView: View {
             }
             .padding(18)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
-            //cabeçalho verde para separar o que eu estou fazendo//
             
             VStack(spacing: 8) {
-                HStack(spacing: 8){
+                HStack(spacing: 8) {
+                    // Card Receitas
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Receitas")
                             .font(.system(size: 10))
@@ -55,8 +53,53 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
+                    
+                    // Card Despesas
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Despesas")
+                            .font(.system(size: 10))
+                            .foregroundColor(.gray)
+                        Text("€ 1.460")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(.red)
+                    }
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                }
+                
+                HStack(spacing: 8) {
+                    // Card Economias
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Economias")
+                            .font(.system(size: 10))
+                            .foregroundColor(.gray)
+                        Text("38%")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(Color(red: 0.102, green: 0.478, blue: 0.235))
+                    }
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    
+                    // Card Transações
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Transações")
+                            .font(.system(size: 10))
+                            .foregroundColor(.gray)
+                        Text("24")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(.primary)
+                    }
+                    .padding(10)
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
                 }
             }
+            .padding(12)
             
             Spacer()
         }
