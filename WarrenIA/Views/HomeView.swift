@@ -100,7 +100,35 @@ struct HomeView: View {
                 }
             }
             .padding(12)
-            
+            // Card categorias
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Gastos por categoria")
+                    .font(.system(size: 11))
+                    .foregroundColor(.gray)
+                
+                // Linha Alimentação
+                HStack {
+                    Text("Alimentação")
+                        .font(.system(size: 11))
+                    Spacer()
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .fill(Color.gray.opacity(0.15))
+                        Rectangle()
+                            .fill(Color(red: 0.102, green: 0.478, blue: 0.235))
+                            .frame(width: 80)
+                    }
+                    .frame(width: 110, height: 5)
+                    .cornerRadius(3)
+                    Text("€ 480")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                }
+            }
+            .padding(14)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+            .padding(.horizontal, 12)
             Spacer()
         }
         .ignoresSafeArea(edges: .top)
