@@ -97,25 +97,26 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
+                    
                 }
+                
             }
             .padding(12)
             // Card categorias
+            
             VStack(alignment: .leading, spacing: 10) {
                 Text("Gastos por categoria")
                     .font(.system(size: 11))
                     .foregroundColor(.gray)
                 
-                // Linha Alimentação
+                // Alimentação
                 HStack {
                     Text("Alimentação")
                         .font(.system(size: 11))
                     Spacer()
                     ZStack(alignment: .leading) {
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.15))
-                        Rectangle()
-                            .fill(Color(red: 0.102, green: 0.478, blue: 0.235))
+                        Rectangle().fill(Color.gray.opacity(0.15))
+                        Rectangle().fill(Color(red: 0.102, green: 0.478, blue: 0.235))
                             .frame(width: 80)
                     }
                     .frame(width: 110, height: 5)
@@ -124,14 +125,67 @@ struct HomeView: View {
                         .font(.system(size: 11))
                         .foregroundColor(.gray)
                 }
+                
+                // Transporte
+                HStack {
+                    Text("Transporte")
+                        .font(.system(size: 11))
+                    Spacer()
+                    ZStack(alignment: .leading) {
+                        Rectangle().fill(Color.gray.opacity(0.15))
+                        Rectangle().fill(Color.green)
+                            .frame(width: 40)
+                    }
+                    .frame(width: 110, height: 5)
+                    .cornerRadius(3)
+                    Text("€ 210")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                }
+                
+                // Lazer
+                HStack {
+                    Text("Lazer")
+                        .font(.system(size: 11))
+                    Spacer()
+                    ZStack(alignment: .leading) {
+                        Rectangle().fill(Color.gray.opacity(0.15))
+                        Rectangle().fill(Color.orange)
+                            .frame(width: 65)
+                    }
+                    .frame(width: 110, height: 5)
+                    .cornerRadius(3)
+                    Text("€ 390")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                }
+                
+                // Outros
+                HStack {
+                    Text("Outros")
+                        .font(.system(size: 11))
+                    Spacer()
+                    ZStack(alignment: .leading) {
+                        Rectangle().fill(Color.gray.opacity(0.15))
+                        Rectangle().fill(Color.gray)
+                            .frame(width: 55)
+                    }
+                    .frame(width: 110, height: 5)
+                    .cornerRadius(3)
+                    Text("€ 380")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                }
             }
             .padding(14)
             .background(Color(.systemGray6))
             .cornerRadius(10)
             .padding(.horizontal, 12)
+        
             Spacer()
         }
         .ignoresSafeArea(edges: .top)
+        
     }
 }
 
