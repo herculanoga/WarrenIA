@@ -13,7 +13,7 @@ struct SplashView: View {
     
     var body: some View {
         if showHome {
-            HomeView()
+            MainTabView()
                 .transition(.opacity)
         } else {
             ZStack {
