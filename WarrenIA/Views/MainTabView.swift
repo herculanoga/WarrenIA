@@ -8,8 +8,7 @@ struct MainTabView: View {
                     Image(systemName: "house")
                     Text("Início")
                 }
-            
-            Text("Extrato")
+            ExtratoView()
                 .tabItem {
                     Image(systemName: "plus.square")
                     Text("Extrato")
