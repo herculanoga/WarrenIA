@@ -16,6 +16,7 @@ struct ExtratoView : View {
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
           // bloco para importacao de arquivos //
             VStack(spacing: 12) {
+                
                 Image(systemName: "arrow.down.doc")
                 Text("Importar extrato PDF")
                 Text("Seus dados ficam apenas no seu dispositivo.")
@@ -23,8 +24,12 @@ struct ExtratoView : View {
                     // ação depois
                 }
             }
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
+            )
             .padding(20)
-                        
+            
             //criando o bloco de transacoes//
             VStack(alignment: .leading, spacing: 10){
                 Text("Transações")//text para transacoes//
