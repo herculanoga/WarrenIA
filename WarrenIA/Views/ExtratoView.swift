@@ -18,12 +18,18 @@ struct ExtratoView : View {
             VStack(spacing: 12) {
                 
                 Image(systemName: "arrow.down.doc")
+                    .font(.system(size: 32))
                 Text("Importar extrato PDF")
                 Text("Seus dados ficam apenas no seu dispositivo.")
                 Button("Selecionar arquivo") {
                     // ação depois
                 }
+                .foregroundColor(.white)
+                .background(Color(red: 0.102, green: 0.478, blue: 0.235))
             }
+            .cornerRadius(10)
+            .padding(20)
+            
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
                     .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
@@ -33,18 +39,21 @@ struct ExtratoView : View {
             //criando o bloco de transacoes//
             VStack(alignment: .leading, spacing: 10){
                 Text("Transações")//text para transacoes//
-                
                 HStack {
-                    VStack(alignment: .leading){
-                        Text("Netflix") //nome
-                        Text("Assinatura") //descricao
+                    ZStack{
+                        Circle()
+                        Image(systemName: "play.rectangle")
+                        VStack(alignment: .leading){
+                            Text("Netflix") //nome
+                            Text("Assinatura") //descricao
+                            
+                        }
                         
+                        Spacer()
+                        
+                        Text("- £17,99")
                     }
-                    
-                    Spacer()
-                    
-                    Text("- £17,99")
-                } //Hstack//
+                }
             }
             .padding(.horizontal, 16)
             
