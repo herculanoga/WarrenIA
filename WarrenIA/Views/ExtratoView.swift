@@ -41,18 +41,21 @@ struct ExtratoView : View {
                 Text("Transações")//text para transacoes//
                 HStack {
                     ZStack{
-                        Circle()
+                        RoundedRectangle(cornerRadius:8)
+                            .fill(.red.opacity(0.15))
+                            .frame(width: 30, height: 32)
                         Image(systemName: "play.rectangle")
-                        VStack(alignment: .leading){
-                            Text("Netflix") //nome
-                            Text("Assinatura") //descricao
-                            
-                        }
-                        
-                        Spacer()
-                        
-                        Text("- £17,99")
+                      
                     }
+                    VStack(alignment: .leading){
+                        Text("Netflix") //nome
+                        Text("Assinatura") //descricao
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Text("- £17,99")
                 }
             }
             .padding(.horizontal, 16)
