@@ -42,6 +42,25 @@ struct ExtratoView : View {
                 HStack {
                     ZStack{
                         RoundedRectangle(cornerRadius:8)
+                            .fill(.blue.opacity(0.15))
+                            .frame(width: 30, height: 32)
+                        Image(systemName: "play.rectangle")
+                      
+                    }
+                    VStack(alignment: .leading){
+                        Text("Carrefour") //nome
+                        Text("Assinatura") //descricao
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Text("- £87,40")
+                }
+                
+                HStack {
+                    ZStack{
+                        RoundedRectangle(cornerRadius:8)
                             .fill(.red.opacity(0.15))
                             .frame(width: 30, height: 32)
                         Image(systemName: "play.rectangle")
@@ -56,6 +75,44 @@ struct ExtratoView : View {
                     Spacer()
                     
                     Text("- £17,99")
+                }
+                
+                HStack {
+                    ZStack{
+                        RoundedRectangle(cornerRadius:8)
+                            .fill(.red.opacity(0.15))
+                            .frame(width: 30, height: 32)
+                        Image(systemName: "play.rectangle")
+                      
+                    }
+                    VStack(alignment: .leading){
+                        Text("Salário") //nome
+                        Text("Receita") //descricao
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Text("+ £3.800,00")
+                }
+                
+                HStack {
+                    ZStack{
+                        RoundedRectangle(cornerRadius:8)
+                            .fill(.red.opacity(0.15))
+                            .frame(width: 30, height: 32)
+                        Image(systemName: "play.rectangle")
+                      
+                    }
+                    VStack(alignment: .leading){
+                        Text("RATP") //nome
+                        Text("Assinatura") //descricao
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Text("- £38,20")
                 }
             }
             .padding(.horizontal, 16)
