@@ -11,10 +11,10 @@ struct ExtratoView : View {
                 Text("Importe o seu extrato em PDF")
                     .font(.system(size: 11))
                     .foregroundColor(.white.opacity(0.7))
-             }
+            }
             .padding(18)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
-          // bloco para importacao de arquivos //
+            // bloco para importacao de arquivos //
             VStack(spacing: 12) {
                 
                 Image(systemName: "arrow.down.doc")
@@ -39,81 +39,32 @@ struct ExtratoView : View {
             //criando o bloco de transacoes//
             VStack(alignment: .leading, spacing: 10){
                 Text("Transações")//text para transacoes//
-                HStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius:8)
-                            .fill(.blue.opacity(0.15))
-                            .frame(width: 30, height: 32)
-                        Image(systemName: "play.rectangle")
-                      
-                    }
-                    VStack(alignment: .leading){
-                        Text("Carrefour") //nome
-                        Text("Assinatura") //descricao
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    Text("- £87,40")
-                }
                 
-                HStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius:8)
-                            .fill(.red.opacity(0.15))
-                            .frame(width: 30, height: 32)
-                        Image(systemName: "play.rectangle")
-                      
-                    }
-                    VStack(alignment: .leading){
-                        Text("Netflix") //nome
-                        Text("Assinatura") //descricao
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    Text("- £17,99")
-                }
+                TransactionRow(
+                    nome: "Carrefour",
+                    categoria: "Assinatura",
+                    valor: "- £87,40",
+                    icone: "play.rectangle"
+                )
                 
-                HStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius:8)
-                            .fill(.red.opacity(0.15))
-                            .frame(width: 30, height: 32)
-                        Image(systemName: "play.rectangle")
-                      
-                    }
-                    VStack(alignment: .leading){
-                        Text("Salário") //nome
-                        Text("Receita") //descricao
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    Text("+ £3.800,00")
-                }
+                TransactionRow (
+                    nome: "Netflix",
+                    categoria: "Assinatura",
+                    valor: "- 17,99",
+                    icone: "play.rectangle"
+                )
                 
-                HStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius:8)
-                            .fill(.red.opacity(0.15))
-                            .frame(width: 30, height: 32)
-                        Image(systemName: "play.rectangle")
-                      
-                    }
-                    VStack(alignment: .leading){
-                        Text("RATP") //nome
-                        Text("Assinatura") //descricao
-                        
-                    }
-                    
-                    Spacer()
-                    
-                    Text("- £38,20")
-                }
+                TransactionRow (
+                    nome: "Salário",
+                    categoria: "Receita",
+                    valor: " + £3.800,00",
+                    icone: "play.rectangle")
+                
+                TransactionRow (
+                    nome: "RATP",
+                    categoria: "Assinatura",
+                    valor: "- £38,20",
+                    icone: "play.rectangle")
             }
             .padding(.horizontal, 16)
             
@@ -122,11 +73,11 @@ struct ExtratoView : View {
             
             
             Spacer()
-           }
-        .ignoresSafeArea(edges: .top)
         }
+        .ignoresSafeArea(edges: .top)
     }
-    
+}
+
 #Preview {
     ExtratoView()
 }
