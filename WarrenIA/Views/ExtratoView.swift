@@ -42,27 +42,27 @@ struct ExtratoView : View {
                 
                 TransactionRow(
                     nome: "Carrefour",
-                    categoria: "Assinatura",
+                    data: "12 mar",
                     valor: "- £87,40",
                     icone: "play.rectangle"
                 )
                 
                 TransactionRow (
                     nome: "Netflix",
-                    categoria: "Assinatura",
+                    data: "10 mar",
                     valor: "- 17,99",
                     icone: "play.rectangle"
                 )
                 
                 TransactionRow (
                     nome: "Salário",
-                    categoria: "Receita",
+                    data: "5 mar",
                     valor: " + £3.800,00",
                     icone: "play.rectangle")
                 
                 TransactionRow (
                     nome: "RATP",
-                    categoria: "Assinatura",
+                    data: "6 mar",
                     valor: "- £38,20",
                     icone: "play.rectangle")
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TransactionRow: View {
     let nome: String
-    let categoria: String
+    let data: String
     let valor: String
     let icone: String
 
@@ -23,7 +23,10 @@ struct TransactionRow: View {
             }
             VStack(alignment: .leading){
                 Text(nome) //nome
-                Text(categoria) //descricao
+                    .font(.title3)
+                Text(data) //data
+                    
+                
                 
             }
                 
