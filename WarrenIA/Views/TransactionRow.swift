@@ -12,6 +12,7 @@ struct TransactionRow: View {
     let data: String
     let valor: String
     let icone: String
+    let cor : Color
 
     var body: some View {
         HStack {
@@ -19,12 +20,15 @@ struct TransactionRow: View {
                 RoundedRectangle(cornerRadius:8)
                     .fill(.blue.opacity(0.15))
                     .frame(width: 30, height: 32)
-                Image(systemName:icone)
+                Image(systemName: icone)
             }
             VStack(alignment: .leading){
                 Text(nome) //nome
                     .font(.title3)
                 Text(data) //data
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    
                     
                 
                 
@@ -33,6 +37,7 @@ struct TransactionRow: View {
             Spacer()
             
             Text(valor)
+                .foregroundColor(cor)
         }
     }
 }

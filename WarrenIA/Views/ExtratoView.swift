@@ -44,27 +44,33 @@ struct ExtratoView : View {
                     nome: "Carrefour",
                     data: "12 mar",
                     valor: "- £87,40",
-                    icone: "play.rectangle"
+                    icone: "play.rectangle",
+                    cor: .red
                 )
                 
                 TransactionRow (
                     nome: "Netflix",
                     data: "10 mar",
                     valor: "- 17,99",
-                    icone: "play.rectangle"
+                    icone: "play.rectangle",
+                    cor: .red
                 )
                 
                 TransactionRow (
                     nome: "Salário",
                     data: "5 mar",
                     valor: " + £3.800,00",
-                    icone: "play.rectangle")
+                    icone: "play.rectangle",
+                    cor: .green
+                )
                 
                 TransactionRow (
                     nome: "RATP",
                     data: "6 mar",
                     valor: "- £38,20",
-                    icone: "play.rectangle")
+                    icone: "play.rectangle",
+                    cor: .red
+                )
             }
             .padding(.horizontal, 16)
             
