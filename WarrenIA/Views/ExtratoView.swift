@@ -45,7 +45,8 @@ struct ExtratoView : View {
                     data: "12 mar",
                     valor: "- £87,40",
                     icone: "play.rectangle",
-                    cor: .red
+                    cor: .red,
+                    iconBackgroundColor: .green
                 )
                 
                 TransactionRow (
@@ -53,7 +54,8 @@ struct ExtratoView : View {
                     data: "10 mar",
                     valor: "- 17,99",
                     icone: "play.rectangle",
-                    cor: .red
+                    cor: .red,
+                    iconBackgroundColor: .yellow
                 )
                 
                 TransactionRow (
@@ -61,7 +63,8 @@ struct ExtratoView : View {
                     data: "5 mar",
                     valor: " + £3.800,00",
                     icone: "play.rectangle",
-                    cor: .green
+                    cor: .green,
+                    iconBackgroundColor: .blue
                 )
                 
                 TransactionRow (
@@ -69,7 +72,8 @@ struct ExtratoView : View {
                     data: "6 mar",
                     valor: "- £38,20",
                     icone: "play.rectangle",
-                    cor: .red
+                    cor: .red,
+                    iconBackgroundColor: .red
                 )
             }
             .padding(.horizontal, 16)

@@ -12,13 +12,14 @@ struct TransactionRow: View {
     let data: String
     let valor: String
     let icone: String
-    let cor : Color
+    let cor: Color
+    let iconBackgroundColor: Color
 
     var body: some View {
         HStack {
             ZStack{
                 RoundedRectangle(cornerRadius:8)
-                    .fill(.blue.opacity(0.15))
+                    .fill(iconBackgroundColor)
                     .frame(width: 30, height: 32)
                 Image(systemName: icone)
             }
