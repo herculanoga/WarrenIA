@@ -40,7 +40,7 @@ struct ExtratoView : View {
             VStack(alignment: .leading, spacing: 10){
                 Text("Transações")//text para transacoes//
                 
-                TransactionRow(
+                TransactionRow (
                     nome: "Carrefour",
                     data: "12 mar",
                     valor: "- £87,40",

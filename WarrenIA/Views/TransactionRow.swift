@@ -19,7 +19,9 @@ struct TransactionRow: View {
         HStack {
             ZStack{
                 RoundedRectangle(cornerRadius:8)
-                    .fill(iconBackgroundColor)
+                    .fill (
+                        iconBackgroundColor.opacity(0.15)
+                    )
                     .frame(width: 30, height: 32)
                 Image(systemName: icone)
             }
