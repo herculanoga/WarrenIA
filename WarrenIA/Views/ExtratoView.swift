@@ -40,41 +40,46 @@ struct ExtratoView : View {
             VStack(alignment: .leading, spacing: 10){
                 Text("Transações")//text para transacoes//
                 
-                TransactionRow (
-                    nome: "Carrefour",
-                    data: "12 mar",
-                    valor: "- £87,40",
-                    icone: "play.rectangle",
-                    cor: .red,
-                    iconBackgroundColor: .green
-                )
-                
-                TransactionRow (
-                    nome: "Netflix",
-                    data: "10 mar",
-                    valor: "- 17,99",
-                    icone: "play.rectangle",
-                    cor: .red,
-                    iconBackgroundColor: .yellow
-                )
-                
-                TransactionRow (
-                    nome: "Salário",
-                    data: "5 mar",
-                    valor: " + £3.800,00",
-                    icone: "play.rectangle",
-                    cor: .green,
-                    iconBackgroundColor: .blue
-                )
-                
-                TransactionRow (
-                    nome: "RATP",
-                    data: "6 mar",
-                    valor: "- £38,20",
-                    icone: "play.rectangle",
-                    cor: .red,
-                    iconBackgroundColor: .red
-                )
+                VStack{
+                    TransactionRow (
+                        nome: "Carrefour",
+                        data: "12 mar",
+                        valor: "- £87,40",
+                        icone: "cart",
+                        cor: .red,
+                        iconBackgroundColor: .green
+                    )
+                    
+                    TransactionRow (
+                        nome: "Netflix",
+                        data: "10 mar",
+                        valor: "- 17,99",
+                        icone: "play.rectangle",
+                        cor: .red,
+                        iconBackgroundColor: .yellow
+                    )
+                    
+                    TransactionRow (
+                        nome: "Salário",
+                        data: "5 mar",
+                        valor: " + £3.800,00",
+                        icone: "chevron.down.dotted.2",
+                        cor: .green,
+                        iconBackgroundColor: .blue
+                    )
+                    
+                    TransactionRow (
+                        nome: "RATP",
+                        data: "6 mar",
+                        valor: "- £38,20",
+                        icone: "bus",
+                        cor: .red,
+                        iconBackgroundColor: .red
+                    )
+                }
+                .padding()
+                .background(.gray.opacity(0.1))
+
             }
             .padding(.horizontal, 16)
             
