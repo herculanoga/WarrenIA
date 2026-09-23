@@ -79,6 +79,7 @@ struct ExtratoView : View {
                 }
                 .padding()
                 .background(.gray.opacity(0.1))
+                .cornerRadius(10)
 
             }
             .padding(.horizontal, 16)
