@@ -12,8 +12,13 @@ struct ExtratoView : View {
                     .font(.system(size: 11))
                     .foregroundColor(.white.opacity(0.7))
             }
-            .padding(18)
+            .frame(
+                maxWidth: .infinity,
+                alignment: .leading
+            )
+            .padding(.top, 90)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
+            
             // bloco para importacao de arquivos //
             VStack(spacing: 12) {
                 
@@ -49,7 +54,7 @@ struct ExtratoView : View {
                         cor: .red,
                         iconBackgroundColor: .green
                     )
-                    
+                    Divider()
                     TransactionRow (
                         nome: "Netflix",
                         data: "10 mar",
@@ -58,7 +63,7 @@ struct ExtratoView : View {
                         cor: .red,
                         iconBackgroundColor: .yellow
                     )
-                    
+                    Divider()
                     TransactionRow (
                         nome: "Salário",
                         data: "5 mar",
@@ -67,7 +72,7 @@ struct ExtratoView : View {
                         cor: .green,
                         iconBackgroundColor: .blue
                     )
-                    
+                    Divider()
                     TransactionRow (
                         nome: "RATP",
                         data: "6 mar",
