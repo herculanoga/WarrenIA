@@ -16,88 +16,93 @@ struct ExtratoView : View {
                 maxWidth: .infinity,
                 alignment: .leading
             )
-            .padding(.top, 90)
+            .padding(.top, 100)
+            .padding(.horizontal, 16)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
             
             // bloco para importacao de arquivos //
-            VStack(spacing: 12) {
-                
-                Image(systemName: "arrow.down.doc")
-                    .font(.system(size: 32))
-                Text("Importar extrato PDF")
-                Text("Seus dados ficam apenas no seu dispositivo.")
-                Button("Selecionar arquivo") {
-                    // ação depois
-                }
-                .foregroundColor(.white)
-                .background(Color(red: 0.102, green: 0.478, blue: 0.235))
-            }
-            .cornerRadius(10)
-            .padding(20)
             
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
-            )
-            .padding(20)
-            
-            //criando o bloco de transacoes//
-            VStack(alignment: .leading, spacing: 10){
-                Text("Transações")//text para transacoes//
-                
-                VStack{
-                    TransactionRow (
-                        nome: "Carrefour",
-                        data: "12 mar",
-                        valor: "- £87,40",
-                        icone: "cart",
-                        cor: .red,
-                        iconBackgroundColor: .green
-                    )
-                    Divider()
-                    TransactionRow (
-                        nome: "Netflix",
-                        data: "10 mar",
-                        valor: "- 17,99",
-                        icone: "play.rectangle",
-                        cor: .red,
-                        iconBackgroundColor: .yellow
-                    )
-                    Divider()
-                    TransactionRow (
-                        nome: "Salário",
-                        data: "5 mar",
-                        valor: " + £3.800,00",
-                        icone: "chevron.down.dotted.2",
-                        cor: .green,
-                        iconBackgroundColor: .blue
-                    )
-                    Divider()
-                    TransactionRow (
-                        nome: "RATP",
-                        data: "6 mar",
-                        valor: "- £38,20",
-                        icone: "bus",
-                        cor: .red,
-                        iconBackgroundColor: .red
-                    )
-                }
-                .padding()
+            VStack {
                 .background(.gray.opacity(0.1))
+                VStack(spacing: 12) {
+                    
+                    Image(systemName: "arrow.down.doc")
+                        .font(.system(size: 32))
+                    Text("Importar extrato PDF")
+                    Text("Seus dados ficam apenas no seu dispositivo.")
+                    Button("Selecionar arquivo") {
+                        // ação depois
+                    }
+                    .foregroundColor(.white)
+                    .background(Color(red: 0.102, green: 0.478, blue: 0.235))
+                }
                 .cornerRadius(10)
-
+                .padding(20)
+                
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
+                )
+                .padding(20)
+                
+                //criando o bloco de transacoes//
+                VStack(alignment: .leading, spacing: 10){
+                    Text("Transações")//text para transacoes//
+                    
+                    VStack{
+                        TransactionRow (
+                            nome: "Carrefour",
+                            data: "12 mar",
+                            valor: "- £87,40",
+                            icone: "cart",
+                            cor: .red,
+                            iconBackgroundColor: .green
+                        )
+                        Divider()
+                        TransactionRow (
+                            nome: "Netflix",
+                            data: "10 mar",
+                            valor: "- 17,99",
+                            icone: "play.rectangle",
+                            cor: .red,
+                            iconBackgroundColor: .yellow
+                        )
+                        Divider()
+                        TransactionRow (
+                            nome: "Salário",
+                            data: "5 mar",
+                            valor: " + £3.800,00",
+                            icone: "chevron.down.dotted.2",
+                            cor: .green,
+                            iconBackgroundColor: .blue
+                        )
+                        Divider()
+                        TransactionRow (
+                            nome: "RATP",
+                            data: "6 mar",
+                            valor: "- £38,20",
+                            icone: "bus",
+                            cor: .red,
+                            iconBackgroundColor: .red
+                        )
+                    }
+                    .padding()
+                    .background(.gray.opacity(0.1))
+                    .cornerRadius(10)
+                    
+                }
+                .padding(.horizontal, 16)
+                
+                
+                
+                
+                
+                Spacer()
             }
-            .padding(.horizontal, 16)
-            
-            
-            
-            
-            
-            Spacer()
-        }
-        .ignoresSafeArea(edges: .top)
+            .ignoresSafeArea(edges: .top)
+         }
+       }
     }
-}
 
 #Preview {
     ExtratoView()
