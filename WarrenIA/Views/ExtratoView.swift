@@ -23,7 +23,6 @@ struct ExtratoView : View {
             // bloco para importacao de arquivos //
             
             VStack {
-                .background(.gray.opacity(0.1))
                 VStack(spacing: 12) {
                     
                     Image(systemName: "arrow.down.doc")
@@ -87,22 +86,23 @@ struct ExtratoView : View {
                         )
                     }
                     .padding()
-                    .background(.gray.opacity(0.1))
+                    .background(.white)
                     .cornerRadius(10)
                     
                 }
                 .padding(.horizontal, 16)
                 
-                
-                
-                
-                
                 Spacer()
             }
             .ignoresSafeArea(edges: .top)
+            .background(.gray.opacity(0.1))
+            .frame(maxWidth: .infinity)
+
+
          }
        }
     }
+
 
 #Preview {
     ExtratoView()
