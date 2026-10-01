@@ -42,7 +42,9 @@ struct ExtratoView : View {
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
                 )
+                .background(.white)
                 .padding(20)
+
                 
                 //criando o bloco de transacoes//
                 VStack(alignment: .leading, spacing: 10){
@@ -94,7 +96,6 @@ struct ExtratoView : View {
                 
                 Spacer()
             }
-            .ignoresSafeArea(edges: .top)
             .background(.gray.opacity(0.1))
             .frame(maxWidth: .infinity)
 
