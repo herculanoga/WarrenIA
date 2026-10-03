@@ -23,26 +23,38 @@ struct ExtratoView : View {
             // bloco para importacao de arquivos //
             
             VStack {
-                VStack(spacing: 12) {
+                VStack(spacing: 18) {
                     
                     Image(systemName: "arrow.down.doc")
-                        .font(.system(size: 32))
+                        .font(.system(size: 28))
+                    
                     Text("Importar extrato PDF")
+                        .font(.system(size: 18, weight: .medium))
+
                     Text("Seus dados ficam apenas no seu dispositivo.")
+                        .font(.system(size: 15, weight: .regular))
+                        .foregroundColor(.gray)
+
+                    
                     Button("Selecionar arquivo") {
                         // ação depois
                     }
                     .foregroundColor(.white)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
                     .background(Color(red: 0.102, green: 0.478, blue: 0.235))
+                    .cornerRadius(10)
+
                 }
-                .cornerRadius(10)
                 .padding(20)
-                
+                .background(.white)
+                .cornerRadius(14)
+
+
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(Color.green, style: StrokeStyle(lineWidth: 1.5, dash: [6]))
                 )
-                .background(.white)
                 .padding(20)
 
                 

@@ -27,7 +27,6 @@ struct HomeView: View {
                     .padding(.bottom, 3)
                 
                 Text("€ 2.340,00")
-                    .font(.system(size: 28, weight: .medium))
                     .foregroundColor(.white)
                     .padding(.bottom, 3)
                 
