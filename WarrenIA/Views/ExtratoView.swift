@@ -27,17 +27,19 @@ struct ExtratoView : View {
                     
                     Image(systemName: "arrow.down.doc")
                         .font(.system(size: 28))
-                    
-                    Text("Importar extrato PDF")
-                        .font(.system(size: 18, weight: .medium))
 
-                    Text("Seus dados ficam apenas no seu dispositivo.")
-                        .font(.system(size: 15, weight: .regular))
-                        .foregroundColor(.gray)
+                    VStack(spacing: 5) {
+                        Text("Importar extrato PDF")
+                            .font(.system(size: 18, weight: .medium))
 
-                    
+                        Text("Seus dados ficam apenas no seu dispositivo.")
+                            .font(.system(size: 15, weight: .regular))
+                            .foregroundColor(.gray)
+                        
+                    }
+                       
                     Button("Selecionar arquivo") {
-                        // ação depois
+                            
                     }
                     .foregroundColor(.white)
                     .padding(.horizontal, 16)
