@@ -4,14 +4,18 @@ struct ExtratoView : View {
     var body: some View {
         VStack (spacing : 0) {
             //cabeçalho verde//
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 3) {
+                
                 Text("Extrato")
-                    .font(.system(size: 30, weight: .medium))
+                    .font(.system(size: 22, weight: .medium))
                     .foregroundColor(.white)
+                
                 Text("Importe o seu extrato em PDF")
                     .font(.system(size: 11))
                     .foregroundColor(.white.opacity(0.7))
+
             }
+            
             .frame(
                 maxWidth: .infinity,
                 alignment: .leading
@@ -23,7 +27,7 @@ struct ExtratoView : View {
             // bloco para importacao de arquivos //
             
             VStack {
-                VStack(spacing: 18) {
+                VStack(spacing: 20) {
                     
                     Image(systemName: "arrow.down.doc")
                         .font(.system(size: 28))
@@ -59,10 +63,16 @@ struct ExtratoView : View {
                 )
                 .padding(20)
 
-                
                 //criando o bloco de transacoes//
+                
                 VStack(alignment: .leading, spacing: 10){
-                    Text("Transações")//text para transacoes//
+                    
+                    Text("Transações")
+                        .font(.system(size: 18, weight: .medium))
+
+                    Text("Último extrato - março de 2026")
+                        .font(.system(size: 15, weight: .regular))
+                        .foregroundColor(.gray)
                     
                     VStack{
                         TransactionRow (
@@ -77,7 +87,7 @@ struct ExtratoView : View {
                         TransactionRow (
                             nome: "Netflix",
                             data: "10 mar",
-                            valor: "- 17,99",
+                            valor: "- £17,99",
                             icone: "play.rectangle",
                             cor: .red,
                             iconBackgroundColor: .yellow
