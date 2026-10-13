@@ -13,14 +13,17 @@ struct ExtratoView : View {
                 Text("Importe o seu extrato em PDF")
                     .font(.system(size: 11))
                     .foregroundColor(.white.opacity(0.7))
+                                
 
             }
+            .padding(.bottom, 20)
+
             
             .frame(
                 maxWidth: .infinity,
                 alignment: .leading
             )
-            .padding(.top, 100)
+            .padding(.top, 60)
             .padding(.horizontal, 16)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
             
