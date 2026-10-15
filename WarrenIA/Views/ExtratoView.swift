@@ -7,11 +7,11 @@ struct ExtratoView : View {
             VStack(alignment: .leading, spacing: 3) {
                 
                 Text("Extrato")
-                    .font(.system(size: 22, weight: .medium))
+                    .font(.system(size: 20, weight: .medium))
                     .foregroundColor(.white)
                 
                 Text("Importe o seu extrato em PDF")
-                    .font(.system(size: 11))
+                    .font(.system(size: 15))
                     .foregroundColor(.white.opacity(0.7))
                                 
 
@@ -32,18 +32,32 @@ struct ExtratoView : View {
             VStack {
                 VStack(spacing: 20) {
                     
-                    Image(systemName: "arrow.down.doc")
-                        .font(.system(size: 28))
+                    ZStack {
+                        Circle()
+                            .fill(.green.opacity(0.25))
+                            .frame(width: 65, height: 65)
+                            
+
+                        Image(systemName: "arrow.down.doc")
+                            .font(.system(size: 28))
+                            .foregroundColor(
+                                Color(red: 0.102, green: 0.478, blue: 0.235)
+                            )
+                        
+                    }
+                    
 
                     VStack(spacing: 5) {
                         Text("Importar extrato PDF")
                             .font(.system(size: 18, weight: .medium))
-
+                        
                         Text("Seus dados ficam apenas no seu dispositivo.")
                             .font(.system(size: 15, weight: .regular))
                             .foregroundColor(.gray)
-                        
+
+            
                     }
+                    
                        
                     Button("Selecionar arquivo") {
                             
@@ -70,18 +84,21 @@ struct ExtratoView : View {
                 
                 VStack(alignment: .leading, spacing: 10){
                     
-                    Text("Transações")
-                        .font(.system(size: 18, weight: .medium))
+                    VStack(alignment: .leading, spacing: 6){
+                        
+                        Text("Transações")
+                            .font(.system(size: 18, weight: .medium))
 
-                    Text("Último extrato - março de 2026")
-                        .font(.system(size: 15, weight: .regular))
-                        .foregroundColor(.gray)
+                        Text("Último extrato - março de 2026")
+                            .font(.system(size: 15, weight: .regular))
+                            .foregroundColor(.gray)
+                    }
                     
                     VStack{
                         TransactionRow (
                             nome: "Carrefour",
                             data: "12 mar",
-                            valor: "- £87,40",
+                            valor: "- €87,40",
                             icone: "cart",
                             cor: .red,
                             iconBackgroundColor: .green
@@ -90,7 +107,7 @@ struct ExtratoView : View {
                         TransactionRow (
                             nome: "Netflix",
                             data: "10 mar",
-                            valor: "- £17,99",
+                            valor: "- €17,99",
                             icone: "play.rectangle",
                             cor: .red,
                             iconBackgroundColor: .yellow
@@ -99,7 +116,7 @@ struct ExtratoView : View {
                         TransactionRow (
                             nome: "Salário",
                             data: "5 mar",
-                            valor: " + £3.800,00",
+                            valor: " + €3.800,00",
                             icone: "chevron.down.dotted.2",
                             cor: .green,
                             iconBackgroundColor: .blue
@@ -108,7 +125,7 @@ struct ExtratoView : View {
                         TransactionRow (
                             nome: "RATP",
                             data: "6 mar",
-                            valor: "- £38,20",
+                            valor: "- €38,20",
                             icone: "bus",
                             cor: .red,
                             iconBackgroundColor: .red
