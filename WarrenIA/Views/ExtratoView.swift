@@ -7,7 +7,7 @@ struct ExtratoView : View {
             VStack(alignment: .leading, spacing: 3) {
                 
                 Text("Extrato")
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.system(size: 30, weight: .medium))
                     .foregroundColor(.white)
                 
                 Text("Importe o seu extrato em PDF")
