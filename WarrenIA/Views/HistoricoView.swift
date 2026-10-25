@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HistoricoView : View {
+struct HistoricoView: View {
     var body: some View {
         VStack (spacing : 0) {
             //cabeçalho verde//
@@ -18,6 +18,7 @@ struct HistoricoView : View {
             }
             .padding(.bottom, 20)
             
+            
             .frame(
                 maxWidth: .infinity,
                 alignment: .leading
@@ -26,64 +27,15 @@ struct HistoricoView : View {
             .padding(.horizontal, 16)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
             
-            
-            //criando o bloco de historico dos meses//
-            
-            
-            VStack{
-                TransactionRow (
-                    nome: "Carrefour",
-                    data: "12 mar",
-                    valor: "- €87,40",
-                    icone: "cart",
-                    cor: .red,
-                    iconBackgroundColor: .green
-                )
-                Divider()
-                TransactionRow (
-                    nome: "Netflix",
-                    data: "10 mar",
-                    valor: "- €17,99",
-                    icone: "play.rectangle",
-                    cor: .red,
-                    iconBackgroundColor: .yellow
-                )
-                Divider()
-                TransactionRow (
-                    nome: "Salário",
-                    data: "5 mar",
-                    valor: " + €3.800,00",
-                    icone: "chevron.down.dotted.2",
-                    cor: .green,
-                    iconBackgroundColor: .blue
-                )
-                Divider()
-                TransactionRow (
-                    nome: "RATP",
-                    data: "6 mar",
-                    valor: "- €38,20",
-                    icone: "bus",
-                    cor: .red,
-                    iconBackgroundColor: .red
-                )
-            }
-            .padding()
-            .background(.white)
-            .cornerRadius(10)
-            
         }
-        .padding(.horizontal, 16)
-        
-        Spacer()
+        .frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity,
+                    alignment: .top
+                )
     }
+}
     
-        .background(.gray.opacity(0.1))
-        .frame(maxWidth: .infinity)
-
-         }
-       
-    
-
 
 #Preview {
     HistoricoView()
