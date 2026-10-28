@@ -82,6 +82,7 @@ struct ExtratoView : View {
 
                 //criando o bloco de transacoes//
                 
+                //Textos para transacoes//
                 VStack(alignment: .leading, spacing: 10){
                     
                     VStack(alignment: .leading, spacing: 6){
@@ -93,6 +94,7 @@ struct ExtratoView : View {
                             .font(.system(size: 15, weight: .regular))
                             .foregroundColor(.gray)
                     }
+                    //Conjunto de Blocos//
                     
                     VStack{
                         TransactionRow (
