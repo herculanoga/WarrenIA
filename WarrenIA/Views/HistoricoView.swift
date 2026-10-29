@@ -29,52 +29,39 @@ struct HistoricoView: View {
             .padding(.horizontal, 16)
             .background(Color(red: 0.102, green: 0.478, blue: 0.235))
             
+            //Blocos de Historicos Mensais//
+            
+            HStack {
+                VStack{
+                    Text ("MAR")
+                    Text ("2026")
+                }
+                                
+                VStack(alignment: .leading, spacing: 4){
+                    Text("Março 2026")
+                    Text("24 Transações - €1.460 gastos")
+                }
+                
+                Spacer()
+                
+                Text("+38%")
+
+            }
+            .padding(16)
+            .background(.gray)
+            .cornerRadius(12)
+            .padding(.horizontal, 16) // Espaço fora do cartão
+            .padding(.top, 16)
+
+
+            
         }
-        
-        VStack{
-            TransactionRow (
-                nome: "Carrefour",
-                data: "12 mar",
-                valor: "- €87,40",
-                icone: "cart",
-                cor: .red,
-                iconBackgroundColor: .green
-            )
-            TransactionRow (
-                nome: "Netflix",
-                data: "10 mar",
-                valor: "- €17,99",
-                icone: "play.rectangle",
-                cor: .red,
-                iconBackgroundColor: .yellow
-            )
-            TransactionRow (
-                nome: "Salário",
-                data: "5 mar",
-                valor: " + €3.800,00",
-                icone: "chevron.down.dotted.2",
-                cor: .green,
-                iconBackgroundColor: .blue
-            )
-            TransactionRow (
-                nome: "RATP",
-                data: "6 mar",
-                valor: "- €38,20",
-                icone: "bus",
-                cor: .red,
-                iconBackgroundColor: .red
-            )
-        }
-        .padding()
-        .background(.white)
-        .cornerRadius(10)
-        
         .frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity,
-                    alignment: .top
-                )
-        
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .top,
+        )
+
     }
         
 }
