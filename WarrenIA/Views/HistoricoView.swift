@@ -31,22 +31,36 @@ struct HistoricoView: View {
             
             //Blocos de Historicos Mensais//
             
-            HStack {
-                VStack{
+            HStack (spacing: 8){
+                VStack(spacing: 2){
                     Text ("MAR")
+                        .font(.system(size: 12, weight: .semibold))
+
                     Text ("2026")
+                        .font(.system(size: 10, weight: .regular))
                 }
+                .padding(8)
+                .background(Color.green.opacity(0.1))
+                .cornerRadius(8)
                                 
                 VStack(alignment: .leading, spacing: 4){
                     Text("Março 2026")
-                    Text("24 Transações - €1.460 gastos")
+                        .font(.system(size: 15, weight: .semibold))
+
+                    Text("24 transações · €1.460")
+                        .font(.system(size: 11))
+                        .foregroundColor(.black)
+
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Spacer()
-                
-                Text("+38%")
+                VStack{
+                    Text("+38%")
+
+                }
 
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
             .background(.gray)
             .cornerRadius(12)
