@@ -48,21 +48,24 @@ struct HistoricoView: View {
                         .font(.system(size: 15, weight: .semibold))
 
                     Text("24 transações · €1.460")
-                        .font(.system(size: 11))
+                        .font(.system(size: 13))
                         .foregroundColor(.black)
 
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                VStack{
+                
                     Text("+38%")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(.green)
 
-                }
+
+
 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
-            .background(.gray)
+            .background(.white)
             .cornerRadius(12)
             .padding(.horizontal, 16) // Espaço fora do cartão
             .padding(.top, 16)
@@ -75,6 +78,7 @@ struct HistoricoView: View {
             maxHeight: .infinity,
             alignment: .top,
         )
+        .background(Color(.systemGroupedBackground))
 
     }
         
