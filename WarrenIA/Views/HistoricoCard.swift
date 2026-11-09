@@ -40,8 +40,7 @@ struct HistoricoCard : View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            
-                Text("\(porcentagem)")
+                Text("\(porcentagem / 100, format: .percent.precision(.fractionLength(0)).sign(strategy: .always()))")
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.green)
 
