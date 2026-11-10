@@ -56,3 +56,13 @@ struct HistoricoCard : View {
         .padding(.top, 16)
     }
 }
+
+#Preview {
+    HistoricoCard(
+        mes: "Março",
+        ano: 2026,
+        quantidadeTransacoes: 24,
+        valorGastos: 1460,
+        porcentagem: 38.0
+    )
+}
