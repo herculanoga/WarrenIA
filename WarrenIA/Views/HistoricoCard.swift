@@ -19,10 +19,11 @@ struct HistoricoCard : View {
     var body: some View {
         HStack (spacing: 8){
             VStack(spacing: 2){
-                Text (mes)
+                
+                Text(mes.prefix(3).uppercased())
                     .font(.system(size: 12, weight: .semibold))
-
-                Text ("\(ano)")
+                
+                Text(ano.formatted(.number.grouping(.never)))
                     .font(.system(size: 10, weight: .regular))
             }
             .padding(8)
@@ -30,7 +31,8 @@ struct HistoricoCard : View {
             .cornerRadius(8)
                             
             VStack(alignment: .leading, spacing: 4){
-                Text("\(mes) \(ano)")
+                
+                Text("\(mes) \(ano.formatted(.number.grouping(.never)))")
                     .font(.system(size: 15, weight: .semibold))
 
                 Text("\(quantidadeTransacoes) transações · \(valorGastos, format: .currency(code: "EUR")) gastos")
