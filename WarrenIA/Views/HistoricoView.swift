@@ -31,47 +31,52 @@ struct HistoricoView: View {
             
             //Blocos de Historicos Mensais//
             
-            HStack (spacing: 8){
-                VStack(spacing: 2){
-                    Text ("MAR")
-                        .font(.system(size: 12, weight: .semibold))
-
-                    Text ("2026")
-                        .font(.system(size: 10, weight: .regular))
-                }
-                .padding(8)
-                .background(Color.green.opacity(0.1))
-                .cornerRadius(8)
-                                
-                VStack(alignment: .leading, spacing: 4){
-                    Text("Março 2026")
-                        .font(.system(size: 15, weight: .semibold))
-
-                    Text("24 transações · €1.460")
-                        .font(.system(size: 13))
-                        .foregroundColor(.black)
-
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                
-                
-                    Text("+38%")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(.green)
-
-
-
-
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(16)
-            .background(.white)
-            .cornerRadius(12)
-            .padding(.horizontal, 16) // Espaço fora do cartão
-            .padding(.top, 16)
-
-
+            HistoricoCard(
+                  mes: "Março",
+                  ano: 2026,
+                  quantidadeTransacoes: 24,
+                  valorGastos: 1460,
+                  porcentagem: 38.0,
+                  cor: .green
+              )
             
+            HistoricoCard(
+                  mes: "Feveriro",
+                  ano: 2026,
+                  quantidadeTransacoes: 19,
+                  valorGastos: 1780,
+                  porcentagem: 22.0,
+                  cor: .orange
+              )
+            
+            HistoricoCard(
+                  mes: "Janeiro",
+                  ano: 2026,
+                  quantidadeTransacoes: 31,
+                  valorGastos: 2100,
+                  porcentagem: 8.0,
+                  cor: .red
+              )
+            
+            HistoricoCard(
+                  mes: "Dezembro",
+                  ano: 2025,
+                  quantidadeTransacoes: 38,
+                  valorGastos: 2640,
+                  porcentagem: 0.12,
+                  cor: .red
+              )
+            
+            HistoricoCard(
+                  mes: "Dezembro",
+                  ano: 2025,
+                  quantidadeTransacoes: 22,
+                  valorGastos: 1520,
+                  porcentagem: 35.0,
+                  cor: .green
+              )
+            
+
         }
         .frame(
             maxWidth: .infinity,

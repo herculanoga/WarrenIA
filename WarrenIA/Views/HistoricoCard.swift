@@ -13,8 +13,7 @@ struct HistoricoCard : View {
     let quantidadeTransacoes: Int
     let valorGastos: Decimal
     let porcentagem: Double
-    
-    
+    let cor: Color
     
     var body: some View {
         HStack (spacing: 8){
@@ -44,7 +43,8 @@ struct HistoricoCard : View {
             
                 Text("\(porcentagem / 100, format: .percent.precision(.fractionLength(0)).sign(strategy: .always()))")
                     .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(.green)
+                    .foregroundColor(cor)
+
 
 
 
@@ -65,6 +65,7 @@ struct HistoricoCard : View {
         ano: 2026,
         quantidadeTransacoes: 24,
         valorGastos: 1460,
-        porcentagem: 38.0
+        porcentagem: 38.0,
+        cor: .green
     )
 }
