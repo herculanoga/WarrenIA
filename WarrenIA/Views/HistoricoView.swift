@@ -68,7 +68,7 @@ struct HistoricoView: View {
               )
             
             HistoricoCard(
-                  mes: "Dezembro",
+                  mes: "Novembro",
                   ano: 2025,
                   quantidadeTransacoes: 22,
                   valorGastos: 1520,

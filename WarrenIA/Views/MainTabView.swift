@@ -14,7 +14,7 @@ struct MainTabView: View {
                     Text("Extrato")
                 }
             
-            Text("Histórico")
+            HistoricoView()
                 .tabItem {
                     Image(systemName: "clock")
                     Text("Histórico")
