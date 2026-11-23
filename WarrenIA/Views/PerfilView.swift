@@ -7,7 +7,9 @@ struct PerfilView: View {
         VStack (spacing : 0) {
             //cabeçalho verde//
             VStack(alignment: .leading, spacing: 3) {
-                
+                Image(systemName: "person.fill")
+                    .font(.system(size: 24))
+                    .foregroundColor(.white)
                 
                 
             }
