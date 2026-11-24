@@ -7,12 +7,23 @@ struct PerfilView: View {
         VStack (spacing : 0) {
             //cabeçalho verde//
             VStack(alignment: .leading, spacing: 3) {
-                Image(systemName: "person.fill")
-                    .font(.system(size: 24))
-                    .foregroundColor(.white)
-                
-                
+                HStack{
+                    ZStack {
+                        Circle()
+                            .fill(.white.opacity(0.25))
+                            .frame(width: 32, height: 32)
+                        Text("YO")
+                            .font(.system(size: 11, weight: .medium))
+                            .foregroundColor(.white)
+                    }
+                    
+                    VStack{
+                        
+                    }
+                }
             }
+                
+            
             .padding(.bottom, 20)
             
             
