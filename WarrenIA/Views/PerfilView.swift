@@ -6,20 +6,23 @@ struct PerfilView: View {
     var body: some View {
         VStack (spacing : 0) {
             //cabeçalho verde//
-            VStack(alignment: .leading, spacing: 3) {
-                HStack{
+            VStack(alignment: .center, spacing: 3) {
+                VStack {
                     ZStack {
                         Circle()
                             .fill(.white.opacity(0.25))
-                            .frame(width: 32, height: 32)
+                            .frame(width: 80, height: 80)
+                        
                         Text("YO")
-                            .font(.system(size: 11, weight: .medium))
+                            .font(.system(size: 24, weight: .medium))
                             .foregroundColor(.white)
                     }
+                    .padding(.bottom, 16)
+
+                    Text("Você")
                     
-                    VStack{
-                        
-                    }
+                    Text("Warren desde Março de 2026")
+                   
                 }
             }
                 
@@ -29,7 +32,7 @@ struct PerfilView: View {
             
             .frame(
                 maxWidth: .infinity,
-                alignment: .leading
+                alignment: .center
             )
             .padding(.top, 60)
             .padding(.horizontal, 16)
