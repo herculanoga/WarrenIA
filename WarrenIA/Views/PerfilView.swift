@@ -4,7 +4,7 @@ import SwiftUI
 // PerfilView
 
 struct PerfilView: View {
-
+    @State private var analiseAutomatica = false
     var body: some View {
 
         // Container principal
@@ -119,6 +119,8 @@ struct PerfilView: View {
             }
             .padding(.horizontal, 16)
             .padding(.top, 20)
+            
+            
 
         }
         .frame(
